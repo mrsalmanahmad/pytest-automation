@@ -6,12 +6,13 @@ import requests
 def test_duckduckgo():
 
     #Arrange
-    url = 'https://api.duckduckgo.com/?q=python+programming&format=json'
+   # url = 'https://api.duckduckgo.com/?q=python+programming&format=json'
+    url = 'https://pocketfactory-qa.ssidecisions.com/'
 
     #Act
     response = requests.get(url)
-    body = response.json()
+    #body = response.json()
 
     #Assert
     assert response.status_code == 200
-    assert 'Python' in body['AbstractText']
+    #assert 'Python' in body['AbstractText']

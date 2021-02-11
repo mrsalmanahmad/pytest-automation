@@ -37,4 +37,11 @@ product = [
 def test_parameterize_func(a,b,product):
     assert a*b == product
 
+@pytest.mark.parametrize("a,b,add",([(1,2,3),(2,1,3)]))
+def test_parametrize_add(a,b,add):
+    assert a+b == add
 
+def test_divide_by_zero():
+  with pytest.raises(ZeroDivisionError) as e:
+    num = 1 / 0
+  assert 'division by zero' in str(e.value)
